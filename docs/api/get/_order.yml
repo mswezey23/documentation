@@ -4,7 +4,7 @@
 - eth_getBalance
 - eth_getBlockByHash
 - eth_getBlockByNumber
-- eth_getTransactionByReceipt
+- eth_getTransactionReceipt
 - eth_getBlockTransactionCountByHash
 - eth_getBlockTransactionCountByNumber
 - eth_getCode
