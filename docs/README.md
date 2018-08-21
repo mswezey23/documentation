@@ -14,4 +14,4 @@ Access the [IPFS API](https://ipfs.io/docs/api/) and our [public IPFS gateway](h
 
 ## WEBSOCKETS API
 
-Use our WebSockets API to poll on filters, subscriptions, events, etc. Access the [Ethereum Pub/Sub API documentation](https://github.com/ethereum/go-ethereum/wiki/RPC-PUB-SUB) and [Parity Ethereum Pub/Sub API documentation](https://wiki.parity.io/JSONRPC-Parity-Pub-Sub-module.html). Read more about our [WebSockets API](https://infura.io/docs/ipfs/get/block_get).
+Use our WebSockets API to poll on filters, subscriptions, events, etc. Access the [Ethereum Pub/Sub API documentation](https://github.com/ethereum/go-ethereum/wiki/RPC-PUB-SUB) and [Parity Ethereum Pub/Sub API documentation](https://wiki.parity.io/JSONRPC-Parity-Pub-Sub-module.html). Read more about our [WebSockets API](https://infura.io/docs/wss/introduction).
