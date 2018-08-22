@@ -37,6 +37,7 @@ const compileDirectory = (contents, pathname, githubUrl, path = '') => {
 
       if (!isDirectory(newPathname)) {
         if (ext !== '.md') return acc;
+        if (!order.includes(name)) return acc;
 
         // if it's markdown, write contents to the object
         const content = readFileSync(newPathname, 'utf8');
