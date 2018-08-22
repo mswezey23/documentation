@@ -11,7 +11,7 @@ module.exports = (fileName, githubUrl, docRoot) => {
     (err) => {
       if (err) return console.log(err);
 
-      console.log(`${fileName} successfully written.`);
+      console.log(`${fileName} successfully written to s3.`);
       return process.exit();
     },
   );
