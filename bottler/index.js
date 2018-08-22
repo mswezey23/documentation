@@ -5,7 +5,11 @@ const YAML = require('yamljs');
 const origin = require('git-origin-url');
 
 const entryFolder = 'docs';
-const docRoot = resolve(__dirname, entryFolder);
+const docRoot = resolve(join(__dirname, '../'), entryFolder);
+
+if (process.env.NODE_ENV === 'development') {
+  require('dotenv').config();
+}
 
 origin((err, url) => {
   if (err) throw err;
@@ -14,8 +18,6 @@ origin((err, url) => {
   if (!branch) throw 'no branch name';
 
   const githubUrl = `${url.split('.git')[0]}/tree/${branch}/`;
-
-  console.log(`building branch "${branch}" from ${githubUrl}`);
 
   const matchName = nameToMatch => (name) => {
     if (typeof name === 'string') {
