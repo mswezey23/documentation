@@ -6,9 +6,8 @@ Below is a quick command line example using CURL:
 
 ```
 $ curl -X POST
--H "Content-Type: application/json"
---data '{"jsonrpc": "2.0", "id": 1, "method": "eth_blockNumber",
-"params": []}'
+-H "Content-Type: application/json" \
+--data '{"jsonrpc": "2.0", "id": 1, "method": "eth_blockNumber", "params": []}' \
 "https://mainnet.infura.io/YOUR-API-KEY"
 ```
 
