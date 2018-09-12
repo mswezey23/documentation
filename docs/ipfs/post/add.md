@@ -17,7 +17,7 @@ Add a file or directory to IPFS.
 - `progress` _[Optional]_ - Stream progress data.
 - `trickle` _[Optional]_ - Use trickle-dag format for dag `generation`.
 - `only-hash` _[Optional]_ - Only chunk and hash - do not write to disk.
-wrap-with-directory _[Optional]_ - Wrap files with a directory object.
+- `wrap-with-directory` _[Optional]_ - Wrap files with a directory object.
 - `hidden` _[Optional]_ - Include files that are hidden. Only takes effect on recursive add.
 chunker [string]: Chunking algorithm to use.
 - `pin` _[Optional]_ - Pin this object when adding. Default: “true”.
