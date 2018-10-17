@@ -10,7 +10,7 @@ NOTE: parity_unsubscribe is only supported on the Kovan network
 ```bash
 >wscat -c wss://kovan.infura.io/ws
 
->{"method":"parity_unsubscribe","params":["0x070fa1c4d1b3fd81"],"id":1,"jsonrpc":"2.0"}
+>{"jsonrpc":"2.0", "id":1, "method":"parity_unsubscribe", "params":["0x070fa1c4d1b3fd81"]}
 ```
 
 ### RESPONSE

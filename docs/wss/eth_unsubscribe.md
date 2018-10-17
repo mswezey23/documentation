@@ -9,7 +9,7 @@ Subscriptions are cancelled with a regular RPC call with eth_unsubscribe as meth
 ```bash
 >wscat -c wss://mainnet.infura.io/ws 
 
->{"id": 1, "method": "eth_unsubscribe", "params": ["0x9cef478923ff08bf67fde6c64013158d"]}
+>{"jsonrpc":"2.0", "id": 1, "method": "eth_unsubscribe", "params": ["0x9cef478923ff08bf67fde6c64013158d"]}
 ```
 
 ### RESPONSE

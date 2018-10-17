@@ -16,16 +16,16 @@ Creates a new subscription over particular events. The node will return a subscr
 >wscat -c wss://mainnet.infura.io/ws 
 
 // newHeads
->{"id": 1, "method": "eth_subscribe", "params": ["newHeads"]}
+>{"jsonrpc":"2.0", "id": 1, "method": "eth_subscribe", "params": ["newHeads"]}
 
 // logs
->{"id": 1, "method": "eth_subscribe", "params": ["logs", {"address": "0x8320fe7702b96808f7bbc0d4a888ed1468216cfd", "topics": ["0xd78a0cb8bb633d06981248b816e7bd33c2a35a6089241d099fa519e361cab902"]}]}
+>{"jsonrpc":"2.0", "id": 1, "method": "eth_subscribe", "params": ["logs", {"address": "0x8320fe7702b96808f7bbc0d4a888ed1468216cfd", "topics": ["0xd78a0cb8bb633d06981248b816e7bd33c2a35a6089241d099fa519e361cab902"]}]}
 
 // newPendingTransactions
->{"id": 1, "method": "eth_subscribe", "params": ["newPendingTransactions"]}
+>{"jsonrpc":"2.0", "id": 1, "method": "eth_subscribe", "params": ["newPendingTransactions"]}
 
 // syncing (not supported on Kovan)
->{"id": 1, "method": "eth_subscribe", "params": ["syncing"]}
+>{"jsonrpc":"2.0", "id": 1, "method": "eth_subscribe", "params": ["syncing"]}
 ```
 
 ### RESPONSE
@@ -96,6 +96,7 @@ Creates a new subscription over particular events. The node will return a subscr
 
 // syncing subscription (not supported on Kovan)
 {
+    "jsonrpc":"2.0",
     "subscription":"0xe2ffeb2703bcf602d42922385829ce96",
     "result": { 
         "syncing":true,
