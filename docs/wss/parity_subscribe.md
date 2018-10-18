@@ -14,7 +14,7 @@ NOTE: parity_subscribe is only supported on the Kovan network
 >wscat -c wss://kovan.infura.io/ws
 
 // subscribe to eth_getBalance
->{"method":"parity_subscribe","params":["eth_getBalance",["0x004702bdcC3C7dbFfd943136107E70B827028600","latest"]],"id":1,"jsonrpc":"2.0"}
+>{"jsonrpc":"2.0", "id":1, "method":"parity_subscribe", "params":["eth_getBalance",["0x004702bdcC3C7dbFfd943136107E70B827028600", "latest"]]}
 ```
 
 ### RESPONSE
