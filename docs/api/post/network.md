@@ -8,10 +8,6 @@ A request using an "HTTP POST-compatible" (state-changing) JSON-RPC method. Use 
 
 `POST https://api.infura.io/v1/jsonrpc/network`
 
-| Parameters |                              |        |
-|------------|------------------------------|--------|
-| Symbol     | Ticker symbol (currency pair | string |
-
 ### Request
 
 #### Attributes
