@@ -18,7 +18,7 @@ Returns an array of all logs matching a given filter object.
     - `fromBlock` _[optional, default is "latest"]_ - an integer block number, or the string "latest", "earliest" or "pending"
     - `toBlock` _[optional, default is "latest"]_ - an integer block number, or the string "latest", "earliest" or "pending"
     - `topics`_[optional]_ - Array of 32 Bytes DATA topics. Topics are order-dependent.
-    - `blockhash`:_[optional, **_future_**]_ With the addition of EIP-234, `blockHash` will be a new filter option which restricts the logs returned to the single block with the 32-byte hash `blockHash`. Using `blockHash` is equivalent to `fromBlock` = `toBlock` = the block number with hash `blockHash`. If `blockHash` is present in in the filter criteria, then neither `fromBlock` nor `toBlock` are allowed.
+    - `blockhash`:_[optional]_ With the addition of EIP-234, `blockHash` restricts the logs returned to the single block with the 32-byte hash `blockHash`. Using `blockHash` is equivalent to `fromBlock` = `toBlock` = the block number with hash `blockHash`. If `blockHash` is present in in the filter criteria, then neither `fromBlock` nor `toBlock` are allowed.
 
 #### EXAMPLE
 ```bash

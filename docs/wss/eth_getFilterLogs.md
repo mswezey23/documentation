@@ -8,7 +8,7 @@ Returns an array of all logs matching filter with given id.
     - `toBlock`_[optional, default: "latest"]_ Integer block number, or "latest" for the last mined block or "pending", "earliest" for not yet mined transactions.
     - `address`: _[optional]_ (20 Bytes) Contract address or a list of addresses from which logs should originate.
     - `topics`: _[optional]_ Array of 32 Bytes DATA topics. Topics are order-dependent. Each topic can also be an array of DATA with "or" options.
-    - blockhash: _[optional, future]_ With the addition of EIP-234, blockHash will be a new filter option which restricts the logs returned to the single block with the 32-byte hash blockHash. Using blockHash is equivalent to fromBlock = toBlock = the block number with hash blockHash. If blockHash is present in in the filter criteria, then neither fromBlock nor toBlock are allowed.
+    - blockhash: _[optional]_ With the addition of EIP-234, blockHash restricts the logs returned to the single block with the 32-byte hash blockHash. Using blockHash is equivalent to fromBlock = toBlock = the block number with hash blockHash. If blockHash is present in in the filter criteria, then neither fromBlock nor toBlock are allowed.
 
 #### EXAMPLE
 ```bash
