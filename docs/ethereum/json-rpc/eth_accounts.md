@@ -1,12 +1,10 @@
 # eth_accounts
 
-## /v1/jsonrpc/:network/eth_accounts
-
 Returns a list of addresses owned by client.
 
 ### REQUEST
 
-`GET https://api.infura.io/v1/jsonrpc/:network/eth_accounts`
+`POST https://<network>.infura.io/v3/YOUR-PROJECT-ID`
 
 #### HEADERS
 
@@ -14,10 +12,17 @@ Returns a list of addresses owned by client.
 
 #### EXAMPLE
 ```bash
-// HTTP GET
-curl https://api.infura.io/v1/jsonrpc/mainnet/eth_accounts
+## JSON-RPC OVER HTTPS POST
+## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
+## You can also replace mainnet with a different supported network
+curl https://mainnet.infura.io/v3/YOUR-PROJECT-ID \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -d '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":73}'
 
-// WEBSOCKETS
+## JSON-RPC OVER WEBSOCKETS
+## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
+## You can also replace mainnet with a different supported network
 >wscat -c wss://mainnet.infura.io/ws 
 >{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":73}
 ```
@@ -25,7 +30,11 @@ curl https://api.infura.io/v1/jsonrpc/mainnet/eth_accounts
 ### RESPONSE
 
 #### RESULT FIELDS
+
 - `ADDRESSES` - arrays of hex codes as strings representing the addresses owned by the client
+
+NOTE: While this JSON-RPC method is supported by Infura, it will *not* return any accounts.  Infura does not support "unlocking" accounts.  Instead, users should send already signed raw 
+transactions using `eth_sendRawTransaction`.
 
 #### BODY
 
@@ -33,6 +42,6 @@ curl https://api.infura.io/v1/jsonrpc/mainnet/eth_accounts
 {
     jsonrpc: "2.0",
     id: 1,
-    result: ["0xc94770007dda54cF92009BFF0dE90c06F603a09f"]
+    result: []
 }
 ```

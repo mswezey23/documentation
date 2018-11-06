@@ -1,12 +1,10 @@
 # eth_call
 
-## /v1/jsonrpc/:network/eth_call
-
 Executes a new message call immediately without creating a transaction on the block chain.
 
 ### REQUEST
 
-`POST https://api.infura.io/v1/jsonrpc/:network/eth_call`
+`POST https://<network>.infura.io/v3/YOUR-PROJECT-ID`
 
 #### HEADERS
 
@@ -24,27 +22,25 @@ Executes a new message call immediately without creating a transaction on the bl
 
 #### EXAMPLE
 ```bash
-// HTTP POST api.infura.io
-curl https://api.infura.io/v1/jsonrpc/mainnet \
-    -X POST \
-    -H "Content-Type: application/json" \
-    -d '{"jsonrpc":"2.0","method":"eth_call","params": [{"from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155","to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567","gas": "0x76c0","gasPrice": "0x9184e72a000","value": "0x9184e72a","data": "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"}, "latest"],"id":1}'
-
-// HTTP POST mainnet.infura.io
-curl https://mainnet.infura.io/ \
+## JSON-RPC OVER HTTPS POST
+## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
+## You can also replace mainnet with a different supported network
+curl https://mainnet.infura.io/v3/YOUR-PROJECT-ID \
     -X POST \
     -H "Content-Type: application/json" \
     -d '{"jsonrpc":"2.0","method":"eth_call","params": [{"from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155","to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567","gas": "0x76c0","gasPrice": "0x9184e72a000","value": "0x9184e72a","data": "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"}, "latest"],"id":1}'
     
-// WEBSOCKETS
->wscat -c wss://mainnet.infura.io/ws 
+## JSON-RPC OVER WEBSOCKETS
+## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
+## You can also replace mainnet with a different supported network
+>wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
 >{"jsonrpc":"2.0","method":"eth_call","params": [{"from": "0xb60e8dd61c5d32be8058bb8eb970870f07233155","to": "0xd46e8dd67c5d32be8058bb8eb970870f07244567","gas": "0x76c0","gasPrice": "0x9184e72a000","value": "0x9184e72a","data": "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"}, "latest"],"id":1}
 ```
 
 ### RESPONSE
 
 #### RESULT FIELDS
-- `RETURN VALUE` - the return value of executed contract.
+- `RETURN VALUE` - the return value of the executed contract method.
 
 #### BODY
 
