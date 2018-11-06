@@ -12,7 +12,7 @@ if (process.env.NODE_ENV === 'development') {
 
 origin((err, url) => {
   if (err) throw err;
-
+  console.log('branch', process.env.GIT_BRANCH);
   const branch = process.env.GIT_BRANCH.split('origin/')[1];
 
   if (!branch) throw new Error('no branch name');
