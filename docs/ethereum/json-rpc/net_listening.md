@@ -1,12 +1,10 @@
 # net_listening
 
-## /v1/jsonrpc/:network/net_listening
-
 Returns true if client is actively listening for network connections.
 
 ### REQUEST
 
-`GET https://api.infura.io/v1/jsonrpc/:network/net_listening`
+`POST https://<network>.infura.io/v3/YOUR-PROJECT-ID`
 
 #### HEADERS
 
@@ -14,17 +12,18 @@ Returns true if client is actively listening for network connections.
 
 #### EXAMPLE
 ```bash
-// HTTP GET
-curl -G https://api.infura.io/v1/jsonrpc/mainnet/net_listening
-
-// HTTP POST
-curl https://mainnet.infura.io/ \
+## JSON-RPC over HTTPS POST
+## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
+## You can also replace mainnet with a different supported network
+curl https://mainnet.infura.io/v3/YOUR-PROJECT-ID \
     -X POST \
     -H "Content-Type: application/json" \
     -d '{"jsonrpc":"2.0","method":"net_listening","params": [],"id":1}'
-    
-// WEBSOCKETS
->wscat -c wss://mainnet.infura.io/ws 
+
+## JSON-RPC over websockets
+## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
+## You can also replace mainnet with a different supported network
+wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
 >{"jsonrpc":"2.0","method":"net_listening","params": [],"id":1}
 ```
 

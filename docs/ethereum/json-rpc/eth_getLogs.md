@@ -1,12 +1,10 @@
 # eth_getLogs
 
-## /v1/jsonrpc/:network/eth_getLogs
-
 Returns an array of all logs matching a given filter object.
 
 ### REQUEST
 
-`GET https://api.infura.io/v1/jsonrpc/:network/eth_getLogs?params=:paramsJSONArray`
+`POST https://<network>.infura.io/v3/YOUR-PROJECT-ID`
 
 #### HEADERS
 
@@ -22,18 +20,19 @@ Returns an array of all logs matching a given filter object.
 
 #### EXAMPLE
 ```bash
-// HTTP GET
-curl -G https://api.infura.io/v1/jsonrpc/mainnet/eth_getLogs --data-urlencode 'params=[{"topics":["0x241ea03ca20251805084d27d4440371c34a0b85ff108f6bb5611248f73818b80"]}]'
-
-// HTTP POST
-curl https://mainnet.infura.io/ \
+## JSON-RPC over HTTPS POST
+## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
+## You can also replace mainnet with a different supported network
+curl https://mainnet.infura.io/v3/YOUR-PROJECT-ID \
     -X POST \
     -H "Content-Type: application/json" \
     -d '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics":["0x241ea03ca20251805084d27d4440371c34a0b85ff108f6bb5611248f73818b80"]}],"id":1}'
-    
-// WEBSOCKETS
->wscat -c wss://mainnet.infura.io/ws 
->{"jsonrpc":"2.0","method":"eth_getLogs","params": ["0x241ea03ca20251805084d27d4440371c34a0b85ff108f6bb5611248f73818b80"],"id":1}
+
+## JSON-RPC over websockets
+## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
+## You can also replace mainnet with a different supported network
+wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
+>{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics":["0x241ea03ca20251805084d27d4440371c34a0b85ff108f6bb5611248f73818b80"]}],"id":1}
 ```
 
 ### RESPONSE

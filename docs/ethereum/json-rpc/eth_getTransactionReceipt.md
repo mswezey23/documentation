@@ -1,12 +1,10 @@
 # eth_getTransactionReceipt
 
-## /v1/jsonrpc/:network/eth_getTransactionReceipt
-
 Returns the receipt of a transaction by transaction hash. **Note** that the receipt is not available for pending transactions.
 
 ### REQUEST
 
-`GET https://api.infura.io/v1/jsonrpc/:network/eth_getTransactionReceipt?params=:paramsJSONArray`
+`POST https://<network>.infura.io/v3/YOUR-PROJECT-ID`
 
 #### HEADERS
 
@@ -17,17 +15,18 @@ Returns the receipt of a transaction by transaction hash. **Note** that the rece
 
 #### EXAMPLE
 ```bash
-// HTTP GET
-curl https://api.infura.io/v1/jsonrpc/mainnet/eth_getTransactionReceipt?params=["0xbb3a336e3f823ec18197f1e13ee875700f08f03e2cab75f0d0b118dabb44cba0"]
-
-// HTTP POST
-curl https://mainnet.infura.io/ \
+## JSON-RPC over HTTPS POST
+## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
+## You can also replace mainnet with a different supported network
+curl https://mainnet.infura.io/v3/YOUR-PROJECT-ID \
     -X POST \
     -H "Content-Type: application/json" \
     -d '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","params": ["0xbb3a336e3f823ec18197f1e13ee875700f08f03e2cab75f0d0b118dabb44cba0"],"id":1}'
 
-// WEBSOCKETS
->wscat -c wss://mainnet.infura.io/ws
+## JSON-RPC over websockets
+## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
+## You can also replace mainnet with a different supported network
+wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
 >{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","params": ["0xbb3a336e3f823ec18197f1e13ee875700f08f03e2cab75f0d0b118dabb44cba0"],"id":1}
 ```
 

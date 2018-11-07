@@ -1,12 +1,10 @@
 # eth_getBlockByNumber
 
-## /v1/jsonrpc/:network/eth_getBlockByNumber
-
 Returns information about a block by hash.
 
 ### REQUEST
 
-`GET https://api.infura.io/v1/jsonrpc/:network/eth_getBlockByNumber?params=:paramsJSONArray`
+`POST https://<network>.infura.io/v3/YOUR-PROJECT-ID`
 
 #### HEADERS
 
@@ -18,17 +16,18 @@ Returns information about a block by hash.
 
 #### EXAMPLE
 ```bash
-// HTTP GET
-curl -G https://api.infura.io/v1/jsonrpc/mainnet/eth_getBlockByNumber --data-urlencode 'params=["0x5BAD55",false]'
-
-// HTTP POST
-curl https://mainnet.infura.io/ \
+## JSON-RPC over HTTPS POST
+## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
+## You can also replace mainnet with a different supported network
+curl https://mainnet.infura.io/v3/YOUR-PROJECT-ID \
     -X POST \
     -H "Content-Type: application/json" \
     -d '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params": ["0x5BAD55",false],"id":1}'
-    
-// WEBSOCKETS
->wscat -c wss://mainnet.infura.io/ws 
+
+## JSON-RPC over websockets
+## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
+## You can also replace mainnet with a different supported network
+wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
 >{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params": ["0x5BAD55",false],"id":1}
 ```
 

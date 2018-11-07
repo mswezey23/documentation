@@ -22,7 +22,7 @@ Topics are order-dependent. A transaction with a log with topics [A, B] will be 
 ```bash
 >wscat -c wss://mainnet.infura.io/ws 
 
->{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topics": ["0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"]}],"id":73}
+>{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topics": ["0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"]}],"id":1}
 ```
 
 ### RESPONSE
@@ -35,7 +35,7 @@ Topics are order-dependent. A transaction with a log with topics [A, B] will be 
 ```json
 {
     "jsonrpc":"2.0",
-    "id":73,
+    "id":1,
     "result":"0x7db09f66a25e197d995d3895278b731"
 }
 ```

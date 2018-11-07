@@ -1,12 +1,10 @@
 # eth_submitHashrate
 
-## /v1/jsonrpc/:network/eth_submitHashrate
-
 Used for submitting mining hashrate.
 
 ### REQUEST
 
-`POST https://api.infura.io/v1/jsonrpc/:network/eth_submitHashrate`
+`POST https://<network>.infura.io/v3/YOUR-PROJECT-ID`
 
 #### HEADERS
 
@@ -18,20 +16,18 @@ Used for submitting mining hashrate.
 
 #### EXAMPLE
 ```bash
-// HTTP POST api.infura.io
-curl https://api.infura.io/v1/jsonrpc/mainnet \
+## JSON-RPC over HTTPS POST
+## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
+## You can also replace mainnet with a different supported network
+curl https://mainnet.infura.io/v3/YOUR-PROJECT-ID \
     -X POST \
     -H "Content-Type: application/json" \
     -d '{"jsonrpc":"2.0","method":"eth_submitHashrate","params":["0x0000000000000000000000000000000000000000000000000000000000500000", "0x59daa26581d0acd1fce254fb7e85952f4c09d0915afd33d3886cd914bc7d283c"],"id":1}'
 
-// HTTP POST mainnet.infura.io
-curl https://mainnet.infura.io/ \
-    -X POST \
-    -H "Content-Type: application/json" \
-    -d '{"jsonrpc":"2.0","method":"eth_submitHashrate","params":["0x0000000000000000000000000000000000000000000000000000000000500000", "0x59daa26581d0acd1fce254fb7e85952f4c09d0915afd33d3886cd914bc7d283c"],"id":1}'
-    
-// WEBSOCKETS
->wscat -c wss://mainnet.infura.io/ws 
+## JSON-RPC over websockets
+## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
+## You can also replace mainnet with a different supported network
+wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
 >{"jsonrpc":"2.0","method":"eth_submitHashrate","params":["0x0000000000000000000000000000000000000000000000000000000000500000", "0x59daa26581d0acd1fce254fb7e85952f4c09d0915afd33d3886cd914bc7d283c"],"id":1}
 ```
 
@@ -44,7 +40,7 @@ curl https://mainnet.infura.io/ \
 
 ```json
 {
-  "id":73,
+  "id":1,
   "jsonrpc":"2.0",
   "result": true
 }

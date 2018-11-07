@@ -1,12 +1,10 @@
 # eth_getBalance
 
-## /v1/jsonrpc/:network/eth_getBalance
-
 Returns the balance of the account of given address.
 
 ### REQUEST
 
-`GET https://api.infura.io/v1/jsonrpc/:network/eth_getBalance?params=:paramsJSONArray`
+`POST https://<network>.infura.io/v3/YOUR-PROJECT-ID`
 
 #### HEADERS
 
@@ -19,18 +17,19 @@ Returns the balance of the account of given address.
 
 #### EXAMPLE
 ```bash
-// HTTP GET
-curl -G https://api.infura.io/v1/jsonrpc/mainnet/eth_getBalance --data-urlencode 'params=["0xc94770007dda54cF92009BFF0dE90c06F603a09f","latest"]'
-
-// HTTP POST
-curl https://mainnet.infura.io/ \
+## JSON-RPC over HTTPS POST
+## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
+## You can also replace mainnet with a different supported network
+curl https://mainnet.infura.io/v3/YOUR-PROJECT-ID \
     -X POST \
     -H "Content-Type: application/json" \
     -d '{"jsonrpc":"2.0","method":"eth_getBalance","params": ["0xc94770007dda54cF92009BFF0dE90c06F603a09f", "latest"],"id":1}'
-    
-// WEBSOCKETS
->wscat -c wss://mainnet.infura.io/ws 
->{"jsonrpc":"2.0","method":"eth_getBalance","params":["0xc94770007dda54cF92009BFF0dE90c06F603a09f","latest"],"id":73}
+
+## JSON-RPC over websockets
+## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
+## You can also replace mainnet with a different supported network
+wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
+>{"jsonrpc":"2.0","method":"eth_getBalance","params": ["0xc94770007dda54cF92009BFF0dE90c06F603a09f", "latest"],"id":1}
 ```
 
 ### RESPONSE

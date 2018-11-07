@@ -1,12 +1,10 @@
 # eth_sendRawTransaction
 
-## /v1/jsonrpc/:network/eth_sendRawTransaction
-
-Creates new message call transaction or a contract creation for signed transactions.
+Submits a pre-signed transaction for broadcast to the Ethereum network.
 
 ### REQUEST
 
-`POST https://api.infura.io/v1/jsonrpc/:network/eth_sendRawTransaction`
+`POST https://<network>.infura.io/v3/YOUR-PROJECT-ID`
 
 #### HEADERS
 
@@ -17,20 +15,18 @@ Creates new message call transaction or a contract creation for signed transacti
 
 #### EXAMPLE
 ```bash
-// HTTP POST api.infura.io
-curl https://api.infura.io/v1/jsonrpc/mainnet \
+## JSON-RPC over HTTPS POST
+## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
+## You can also replace mainnet with a different supported network
+curl https://mainnet.infura.io/v3/YOUR-PROJECT-ID \
     -X POST \
     -H "Content-Type: application/json" \
     -d '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params":["0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"],"id":1}'
 
-// HTTP POST mainnet.infura.io
-curl https://mainnet.infura.io/ \
-    -X POST \
-    -H "Content-Type: application/json" \
-    -d '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params":["0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"],"id":1}'
-    
-// WEBSOCKETS
->wscat -c wss://mainnet.infura.io/ws 
+## JSON-RPC over websockets
+## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
+## You can also replace mainnet with a different supported network
+wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
 >{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params":["0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"],"id":1}
 ```
 

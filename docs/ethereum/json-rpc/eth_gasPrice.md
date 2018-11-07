@@ -1,12 +1,10 @@
 # eth_gasPrice
 
-## /v1/jsonrpc/:network/eth_gasPrice
-
 Returns the number of hashes per second that the node is mining with.
 
 ### REQUEST
 
-`GET https://api.infura.io/v1/jsonrpc/:network/eth_gasPrice`
+`POST https://<network>.infura.io/v3/YOUR-PROJECT-ID`
 
 #### HEADERS
 
@@ -14,18 +12,19 @@ Returns the number of hashes per second that the node is mining with.
 
 #### EXAMPLE
 ```bash
-// HTTP GET
-curl https://api.infura.io/v1/jsonrpc/mainnet/eth_gasPrice
-
-// HTTP POST
-curl https://mainnet.infura.io/ \
+## JSON-RPC over HTTPS POST
+## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
+## You can also replace mainnet with a different supported network
+curl https://mainnet.infura.io/v3/YOUR-PROJECT-ID \
     -X POST \
     -H "Content-Type: application/json" \
     -d '{"jsonrpc":"2.0","method":"eth_gasPrice","params": [],"id":1}'
-    
-// WEBSOCKETS
->wscat -c wss://mainnet.infura.io/ws 
->{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}
+
+## JSON-RPC over websockets
+## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
+## You can also replace mainnet with a different supported network
+wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
+>{"jsonrpc":"2.0","method":"eth_gasPrice","params": [],"id":1}
 ```
 
 ### RESPONSE

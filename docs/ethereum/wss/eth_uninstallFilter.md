@@ -6,7 +6,7 @@ Uninstalls a filter with given id. Should always be called when watch is no long
 ```bash
 >wscat -c wss://mainnet.infura.io/ws 
 
->{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["0xfe704947a3cd3ca12541458a4321c869"],"id":73}
+>{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["0xfe704947a3cd3ca12541458a4321c869"],"id":1}
 ```
 
 ### RESPONSE
@@ -19,7 +19,7 @@ Uninstalls a filter with given id. Should always be called when watch is no long
 ```json
 {
     "jsonrpc":"2.0",
-    "id":73,
+    "id":1,
     "result":true
 }
 ```

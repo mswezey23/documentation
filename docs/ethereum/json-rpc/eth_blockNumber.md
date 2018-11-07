@@ -23,8 +23,8 @@ curl https://mainnet.infura.io/v3/YOUR-PROJECT-ID \
 ## JSON-RPC over websockets
 ## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
 ## You can also replace mainnet with a different supported network
->wscat -c wss://mainnet.infura.io/ws
->{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":73}
+wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
+>{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}
 ```
 
 ### RESPONSE
