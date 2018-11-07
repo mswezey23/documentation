@@ -2,7 +2,7 @@
 
 ### JSON-RPC Methods
 
-Below is a quick command line example using CURL:
+Below is a quick command line example using `curl`:
 
 ```
 # Be sure to replace YOUR-PROJECT-ID with a Project ID from your Infura dashboard
