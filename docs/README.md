@@ -6,7 +6,7 @@ After sign up, you will create your first "Project", which will include a v3 "Pr
 
 ## Ethereum API
 
-Seamlessly access Ethereum via the Infura load-balanced nodes and smart architecture the same way you would via your own nodes. We have built services and APIs around [JSON RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC) over both HTTP and WebSockets that you can use with your favorite libraries and frameworks, on four Ethereum networks. [Read more about our Ethereum API](/docs/gettingStarted/makeRequests).
+Seamlessly access Ethereum via the Infura load-balanced nodes and smart architecture the same way you would via your own nodes. We have built services and APIs around [JSON RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC) over both HTTPS and WebSockets that you can use with your favorite libraries and frameworks, on four Ethereum networks. [Read more about our Ethereum API](/docs/gettingStarted/makeRequests).
 
 ## IPFS API
 
@@ -14,4 +14,4 @@ Access the [IPFS API](https://ipfs.io/docs/api/) and our [public IPFS gateway](h
 
 ## WEBSOCKETS API
 
-Use our JSON-RPC websockets transport to create stateful subscriptions for new blocks. Access the [Ethereum Pub/Sub API documentation](https://github.com/ethereum/go-ethereum/wiki/RPC-PUB-SUB) and [Parity Ethereum Pub/Sub API documentation](https://wiki.parity.io/JSONRPC-Parity-Pub-Sub-module.html). Read more about our [WebSockets API](/docs/wss/introduction).
+Use our JSON-RPC websockets transport to create stateful subscriptions for new blocks. Access the [Ethereum Pub/Sub API documentation](https://github.com/ethereum/go-ethereum/wiki/RPC-PUB-SUB) and [Parity Ethereum Pub/Sub API documentation](https://wiki.parity.io/JSONRPC-Parity-Pub-Sub-module.html). Read more about our [WebSocket API](/docs/wss/introduction).
