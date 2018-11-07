@@ -16,6 +16,8 @@ const compileDirectory = (contents, pathname, githubUrl, path = '') => {
   const orderPath = `${pathname}/_order.yml`;
   const order = existsSync(orderPath) ? YAML.load(orderPath) : null;
 
+  console.log(pathname);
+
   return contents
     .map(item => parse(item))
     .sort((a, b) => {
