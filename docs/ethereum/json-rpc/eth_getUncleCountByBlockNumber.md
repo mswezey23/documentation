@@ -21,13 +21,13 @@ Returns the number of uncles in a block from a block matching the given block nu
 curl https://mainnet.infura.io/v3/YOUR-PROJECT-ID \
     -X POST \
     -H "Content-Type: application/json" \
-    -d '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber","params": ["latest"],"id":1}'
+    -d '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber","params": ["0x5bad55"],"id":1}'
 
 ## JSON-RPC over websockets
 ## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
 ## You can also replace mainnet with a different supported network
 wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
->{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber","params": ["latest"],"id":1}
+>{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber","params": ["0x5bad55"],"id":1}
 ```
 
 ### RESPONSE
@@ -39,8 +39,8 @@ wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
 
 ```json
 {
-    jsonrpc: "2.0",
-    id: 1,
-    result: "0x57"
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "0x1"
 }
 ```

@@ -1,6 +1,6 @@
 # eth_gasPrice
 
-Returns the number of hashes per second that the node is mining with.
+Returns the current gas price in wei.
 
 ### REQUEST
 
@@ -30,14 +30,14 @@ wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
 ### RESPONSE
 
 #### RESULT FIELDS
-- `HASHRATE` - a hex code of an integer representing the current gas price in wei.
+- `GAS PRICE` - a hex code of an integer representing the current gas price in wei.
 
 #### BODY
 
 ```js
 {
-    jsonrpc: "2.0",
-    id: 1,
-    result: "0x3b9acde7"
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "0x12a05f200"
 }
 ```

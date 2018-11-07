@@ -1,6 +1,6 @@
 # eth_getCode
 
-Returns code at a given address.
+Returns the compiled smart contract code, if any, at a given address.
 
 ### REQUEST
 
@@ -22,13 +22,13 @@ Returns code at a given address.
 curl https://mainnet.infura.io/v3/YOUR-PROJECT-ID \
     -X POST \
     -H "Content-Type: application/json" \
-    -d '{"jsonrpc":"2.0","method":"eth_getCode","params": ["0x06012c8cf97bead5deae237070f9587f8e7a266d"],"id":1}'
+    -d '{"jsonrpc":"2.0","method":"eth_getCode","params": ["0x06012c8cf97bead5deae237070f9587f8e7a266d", "0x65a8db"],"id":1}'
 
 ## JSON-RPC over websockets
 ## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
 ## You can also replace mainnet with a different supported network
 wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
->{"jsonrpc":"2.0","method":"eth_getCode","params": ["0x06012c8cf97bead5deae237070f9587f8e7a266d"],"id":1}
+>{"jsonrpc":"2.0","method":"eth_getCode","params": ["0x06012c8cf97bead5deae237070f9587f8e7a266d", "0x65a8db"],"id":1}
 ```
 
 ### RESPONSE
@@ -40,8 +40,8 @@ wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
 
 ```json
 {
-    jsonrpc: "2.0",
-    id: 1,
-    result: "0x606060............"
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "0x60606040..."
 }
 ```

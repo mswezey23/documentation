@@ -51,23 +51,23 @@ wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
 
 ```js
 {
-    jsonrpc: "2.0",
-    id: 1,
-    result: {
-        blockHash: "0xb3b20624f8f0f86eb50dd04688409e5cea4bd02d700bf6e79e9384d47d6a5a35",
-        blockNumber: "0x5bad55",
-        from: "0x398137383b3d25c92898c656696e41950e47316b",
-        gas: "0x1d45e",
-        gasPrice: "0xfa56ea00",
-        hash: "0xbb3a336e3f823ec18197f1e13ee875700f08f03e2cab75f0d0b118dabb44cba0",
-        input: "0xf7d8c88300000000000000000000000000000000000000000000000000000000000cee6100000000000000000000000000000000000000000000000000000000000ac3e1",
-        nonce: "0x18",
-        to: "0x06012c8cf97bead5deae237070f9587f8e7a266d",
-        transactionIndex: "0x11",
-        value: "0x1c6bf526340000",
-        v: "0x25",
-        r: "0x2a378831cf81d99a3f06a18ae1b6ca366817ab4d88a70053c41d7a8f0368e031",
-        s: "0x450d831a05b6e418724436c05c155e0a1b7b921015d0fbc2f667aed709ac4fb5"
-    }
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "blockHash": "0xb3b20624f8f0f86eb50dd04688409e5cea4bd02d700bf6e79e9384d47d6a5a35",
+    "blockNumber": "0x5bad55",
+    "from": "0xfbb1b73c4f0bda4f67dca266ce6ef42f520fbb98",
+    "gas": "0x249f0",
+    "gasPrice": "0x174876e800",
+    "hash": "0x8784d99762bccd03b2086eabccee0d77f14d05463281e121a62abfebcf0d2d5f",
+    "input": "0x6ea056a9000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000bd8d7fa6f8cc00",
+    "nonce": "0x5e4724",
+    "r": "0xd1556332df97e3bd911068651cfad6f975a30381f4ff3a55df7ab3512c78b9ec",
+    "s": "0x66b51cbb10cd1b2a09aaff137d9f6d4255bf73cb7702b666ebd5af502ffa4410",
+    "to": "0x4b9c25ca0224aef6a7522cabdbc3b2e125b7ca50",
+    "transactionIndex": "0x0",
+    "v": "0x25",
+    "value": "0x0"
+  }
 }
 ```

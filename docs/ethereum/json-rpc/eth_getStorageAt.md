@@ -23,13 +23,13 @@ Returns the value from a storage position at a given address.
 curl https://mainnet.infura.io/v3/YOUR-PROJECT-ID \
     -X POST \
     -H "Content-Type: application/json" \
-    -d '{"jsonrpc":"2.0","method":"eth_getStorageAt","params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"],"id":1}'
+    -d '{"jsonrpc":"2.0","method":"eth_getStorageAt","params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "0x65a8db"],"id":1}'
 
 ## JSON-RPC over websockets
 ## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
 ## You can also replace mainnet with a different supported network
 wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
->{"jsonrpc":"2.0","method":"eth_getStorageAt","params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"],"id":1}
+>{"jsonrpc":"2.0","method":"eth_getStorageAt","params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "0x65a8db"],"id":1}
 ```
 
 ### RESPONSE
@@ -41,9 +41,9 @@ wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
 
 ```json
 {
-    jsonrpc: "2.0",
-    id: 1,
-    result: "0x000000000000000000000000000000000000000000000000000000000000162e"
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
 }
 ```
 
@@ -63,7 +63,10 @@ contract Storage {
 Retrieving the value of pos0 is straight forward:
 
 ```bash
-curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
+curl https://mainnet.infura.io/v3/YOUR-PROJECT-ID \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -d '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "0x65a8db"], "id": 1}'
 ```
 
 ```json
@@ -94,7 +97,10 @@ undefined
 
 Now to fetch the storage:
 ```bash
-curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545
+curl https://mainnet.infura.io/v3/YOUR-PROJECT-ID \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -d '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "0x65a8db"], "id": 1}'
 ```
 
 ```json

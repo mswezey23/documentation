@@ -36,8 +36,8 @@ wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
 
 ```js
 {
-    jsonrpc: "2.0",
-    id: 1,
-    result: true
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": true
 }
 ```

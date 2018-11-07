@@ -1,6 +1,6 @@
 # eth_getBlockTransactionCountByNumber
 
-Returns the number of transactions in a block matching the given block number.
+Returns the number of transactions in the block with the given block number.
 
 ### REQUEST
 
@@ -39,8 +39,8 @@ wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
 
 ```json
 {
-    jsonrpc: "2.0",
-    id: 1,
-    result: "0x57"
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "0x9"
 }
 ```

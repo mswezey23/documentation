@@ -13,7 +13,7 @@ Returns an array of all logs matching a given filter object.
 #### REQUEST PARAMS
 - `FILTER OBJECT`
     - `address` _[optional]_ - a string representing the address (20 bytes) to check for balance
-    - `fromBlock` _[optional, default is "latest"]_ - an integer block number, or the string "latest", "earliest" or "pending"
+    - `fromBlock` _[optional, default is "earliest"]_ - an integer block number, or the string "latest", "earliest" or "pending"
     - `toBlock` _[optional, default is "latest"]_ - an integer block number, or the string "latest", "earliest" or "pending"
     - `topics`_[optional]_ - Array of 32 Bytes DATA topics. Topics are order-dependent.
     - `blockhash`:_[optional]_ With the addition of EIP-234, `blockHash` restricts the logs returned to the single block with the 32-byte hash `blockHash`. Using `blockHash` is equivalent to `fromBlock` = `toBlock` = the block number with hash `blockHash`. If `blockHash` is present in in the filter criteria, then neither `fromBlock` nor `toBlock` are allowed.
@@ -26,13 +26,13 @@ Returns an array of all logs matching a given filter object.
 curl https://mainnet.infura.io/v3/YOUR-PROJECT-ID \
     -X POST \
     -H "Content-Type: application/json" \
-    -d '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics":["0x241ea03ca20251805084d27d4440371c34a0b85ff108f6bb5611248f73818b80"]}],"id":1}'
+    -d '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"blockHash": "0x7c5a35e9cb3e8ae0e221ab470abae9d446c3a5626ce6689fc777dcffcab52c70", "topics":["0x241ea03ca20251805084d27d4440371c34a0b85ff108f6bb5611248f73818b80"]}],"id":1}'
 
 ## JSON-RPC over websockets
 ## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
 ## You can also replace mainnet with a different supported network
 wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
->{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics":["0x241ea03ca20251805084d27d4440371c34a0b85ff108f6bb5611248f73818b80"]}],"id":1}
+>{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"blockHash": "0x7c5a35e9cb3e8ae0e221ab470abae9d446c3a5626ce6689fc777dcffcab52c70", "topics":["0x241ea03ca20251805084d27d4440371c34a0b85ff108f6bb5611248f73818b80"]}],"id":1}
 ```
 
 ### RESPONSE
@@ -57,34 +57,35 @@ wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
 
 ```json
 {
-    jsonrpc: "2.0",
-    id: 1,
-    result: [{
-            address: "0x1a94fce7ef36bc90959e206ba569a12afbc91ca1",
-            topics: [
-                "0x241ea03ca20251805084d27d4440371c34a0b85ff108f6bb5611248f73818b80"
-            ],
-            data: "0x0000000000000000000000003e3310720058c51f0de456e273c626cdd35065700000000000000000000000000000000000000000000000000000000000003185000000000000000000000000000000000000000000000000000000000000318200000000000000000000000000000000000000000000000000000000005c2a23",
-            blockNumber: "0x5c29fb",
-            transactionHash: "0x3dc91b98249fa9f2c5c37486a2427a3a7825be240c1c84961dfb3063d9c04d50",
-            transactionIndex: "0x1d",
-            blockHash: "0x7c5a35e9cb3e8ae0e221ab470abae9d446c3a5626ce6689fc777dcffcab52c70",
-            logIndex: "0x1d",
-            removed: false
-        },
-        {
-            address: "0x06012c8cf97bead5deae237070f9587f8e7a266d",
-            topics: [
-                "0x241ea03ca20251805084d27d4440371c34a0b85ff108f6bb5611248f73818b80"
-            ],
-            data: "0x00000000000000000000000077ea137625739598666ded665953d26b3d8e374400000000000000000000000000000000000000000000000000000000000749ff00000000000000000000000000000000000000000000000000000000000a749d00000000000000000000000000000000000000000000000000000000005c2a0f",
-            blockNumber: "0x5c29fb",
-            transactionHash: "0x788b1442414cb9c9a36dba2abe250763161a6f6395788a2e808f1b34e92beec1",
-            transactionIndex: "0x54",
-            blockHash: "0x7c5a35e9cb3e8ae0e221ab470abae9d446c3a5626ce6689fc777dcffcab52c70",
-            logIndex: "0x57",
-            removed: false
-        }
-    ]
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": [
+    {
+      "address": "0x1a94fce7ef36bc90959e206ba569a12afbc91ca1",
+      "blockHash": "0x7c5a35e9cb3e8ae0e221ab470abae9d446c3a5626ce6689fc777dcffcab52c70",
+      "blockNumber": "0x5c29fb",
+      "data": "0x0000000000000000000000003e3310720058c51f0de456e273c626cdd35065700000000000000000000000000000000000000000000000000000000000003185000000000000000000000000000000000000000000000000000000000000318200000000000000000000000000000000000000000000000000000000005c2a23",
+      "logIndex": "0x1d",
+      "removed": false,
+      "topics": [
+        "0x241ea03ca20251805084d27d4440371c34a0b85ff108f6bb5611248f73818b80"
+      ],
+      "transactionHash": "0x3dc91b98249fa9f2c5c37486a2427a3a7825be240c1c84961dfb3063d9c04d50",
+      "transactionIndex": "0x1d"
+    },
+    {
+      "address": "0x06012c8cf97bead5deae237070f9587f8e7a266d",
+      "blockHash": "0x7c5a35e9cb3e8ae0e221ab470abae9d446c3a5626ce6689fc777dcffcab52c70",
+      "blockNumber": "0x5c29fb",
+      "data": "0x00000000000000000000000077ea137625739598666ded665953d26b3d8e374400000000000000000000000000000000000000000000000000000000000749ff00000000000000000000000000000000000000000000000000000000000a749d00000000000000000000000000000000000000000000000000000000005c2a0f",
+      "logIndex": "0x57",
+      "removed": false,
+      "topics": [
+        "0x241ea03ca20251805084d27d4440371c34a0b85ff108f6bb5611248f73818b80"
+      ],
+      "transactionHash": "0x788b1442414cb9c9a36dba2abe250763161a6f6395788a2e808f1b34e92beec1",
+      "transactionIndex": "0x54"
+    }
+  ]
 }
 ```

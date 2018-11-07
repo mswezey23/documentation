@@ -34,10 +34,12 @@ wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
 
 #### BODY
 
+NOTE: Infura will always return `false` in response to `eth_mining`.
+
 ```js
 {
-    jsonrpc: "2.0",
-    id: 1,
-    result: false
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": false
 }
 ```

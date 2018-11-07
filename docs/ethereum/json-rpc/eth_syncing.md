@@ -39,21 +39,9 @@ wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
 #### BODY
 
 ```js
-\\ When not syncing
 {
-    jsonrpc: "2.0",
-    id: 1,
-    result: "1"
-}
-
-\\ When syncing
-{
-    "id":1,
-    "jsonrpc": "2.0",
-    "result": {
-        startingBlock: '0x384',
-        currentBlock: '0x386',
-        highestBlock: '0x454'
-    }
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": false
 }
 ```

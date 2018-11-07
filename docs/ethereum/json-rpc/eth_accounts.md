@@ -40,8 +40,8 @@ transactions using `eth_sendRawTransaction`.
 
 ```js
 {
-    jsonrpc: "2.0",
-    id: 1,
-    result: []
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": []
 }
 ```

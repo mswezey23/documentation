@@ -36,8 +36,8 @@ wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
 
 ```json
 {
-    jsonrpc: "2.0",
-    id: 1,
-    result: "Geth/v1.8.6-patched-leveldb-8818ab0b/linux-amd64/go1.9.2"
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "Geth/v1.8.15-omnibus-255989da/linux-amd64/go1.10.1"
 }
 ```

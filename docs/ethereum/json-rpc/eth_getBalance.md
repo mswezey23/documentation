@@ -41,8 +41,8 @@ wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
 
 ```json
 {
-    jsonrpc: "2.0",
-    id: 1,
-    result: "0x29a33d8a9314006"
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "0x2fe84e3113d7b"
 }
 ```

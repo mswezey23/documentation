@@ -38,14 +38,15 @@ wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
 
 #### BODY
 
+NOTE: While Infura will allow this method, `eth_getWork` will never actually return mining work.
+
 ```js
 {
-  "id":1,
-  "jsonrpc":"2.0",
-  "result": [
-      "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
-      "0x5EED00000000000000000000000000005EED0000000000000000000000000000",
-      "0xd1ff1c01710000000000000000000000d1ff1c01710000000000000000000000"
-    ]
+  "jsonrpc": "2.0",
+  "id": 1,
+  "error": {
+    "code": -32000,
+    "message": "no mining work available yet"
+  }
 }
 ```
