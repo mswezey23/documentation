@@ -6,7 +6,7 @@ The regular Ethereum API is also supported and documented in the 'examples' port
 All examples in this reference section uses `wscat`, but will work with any tool that supports websockets.
 
 Some tools you can use for making these requests
-- [`wscat`](https://github.com/websockets/wscat)
+- [wscat](https://github.com/websockets/wscat)
 - [Advanced Rest Client](https://install.advancedrestclient.com/)
 
 #### EXAMPLE
