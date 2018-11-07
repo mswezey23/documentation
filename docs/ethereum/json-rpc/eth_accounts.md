@@ -12,7 +12,7 @@ Returns a list of addresses owned by client.
 
 #### EXAMPLE
 ```bash
-## JSON-RPC OVER HTTPS POST
+## JSON-RPC over HTTPS POST
 ## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
 ## You can also replace mainnet with a different supported network
 curl https://mainnet.infura.io/v3/YOUR-PROJECT-ID \
@@ -20,7 +20,7 @@ curl https://mainnet.infura.io/v3/YOUR-PROJECT-ID \
     -H "Content-Type: application/json" \
     -d '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":73}'
 
-## JSON-RPC OVER WEBSOCKETS
+## JSON-RPC over websockets
 ## Replace YOUR-PROJECT-ID with a Project ID from your Infura Dashboard
 ## You can also replace mainnet with a different supported network
 >wscat -c wss://mainnet.infura.io/ws 
