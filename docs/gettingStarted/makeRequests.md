@@ -29,6 +29,7 @@ It's important to note that JSON-RPC requests are transport agnostic, the same r
 $ wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
 > {"jsonrpc": "2.0", "id": 1, "method": "eth_blockNumber", "params": []}
 < {"jsonrpc":"2.0","id":1,"result":"0x657abc"}
+```
 
 ### Subscriptions and Filters
 
