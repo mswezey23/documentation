@@ -14,4 +14,4 @@ Use our JSON-RPC websockets transport to create stateful subscriptions for new b
 
 ## IPFS API
 
-Use our JSON-RPC websockets transport to create stateful subscriptions for new blocks. Access the [Ethereum Pub/Sub API documentation](https://github.com/ethereum/go-ethereum/wiki/RPC-PUB-SUB) and [Parity Ethereum Pub/Sub API documentation](https://wiki.parity.io/JSONRPC-Parity-Pub-Sub-module.html). Read more about our [WebSocket API](/docs/ethereum/wss/introduction).
+Access the [IPFS API](https://ipfs.io/docs/api/) and our [public IPFS gateway](https://ipfs.infura.io/ipfs/Qmaisz6NMhDB51cCvNWa1GMS7LU1pAxdF4Ld6Ft9kZEP2a) over HTTPS like you would be able to via your own IPFS nodes. [Read more about our IPFS API](/docs/ipfs/get/block_get).
