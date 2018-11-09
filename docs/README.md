@@ -8,7 +8,7 @@ After sign up, you will create your first "Project", which will include a v3 "Pr
 
 Seamlessly access Ethereum via the Infura load-balanced nodes and smart architecture the same way you would via your own nodes. We have built services and APIs around [JSON RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC) over both HTTPS and WebSockets that you can use with your favorite libraries and frameworks, on four Ethereum networks. [Read more about our Ethereum API](/docs/gettingStarted/makeRequests).
 
-## IPFS API
+## WEBSOCKETS API
 
 Access the [IPFS API](https://ipfs.io/docs/api/) and our [public IPFS gateway](https://ipfs.infura.io/ipfs/Qmaisz6NMhDB51cCvNWa1GMS7LU1pAxdF4Ld6Ft9kZEP2a) over HTTPS like you would be able to via your own IPFS nodes. [Read more about our IPFS API](/docs/ipfs/get/block_get).
 
