@@ -12,6 +12,6 @@ Seamlessly access Ethereum via the Infura load-balanced nodes and smart architec
 
 Use our JSON-RPC websockets transport to create stateful subscriptions for new blocks. Access the [Ethereum Pub/Sub API documentation](https://github.com/ethereum/go-ethereum/wiki/RPC-PUB-SUB) and [Parity Ethereum Pub/Sub API documentation](https://wiki.parity.io/JSONRPC-Parity-Pub-Sub-module.html). Read more about our [WebSocket API](/docs/ethereum/wss/introduction).
 
-## WEBSOCKETS API
+## IPFS API
 
 Use our JSON-RPC websockets transport to create stateful subscriptions for new blocks. Access the [Ethereum Pub/Sub API documentation](https://github.com/ethereum/go-ethereum/wiki/RPC-PUB-SUB) and [Parity Ethereum Pub/Sub API documentation](https://wiki.parity.io/JSONRPC-Parity-Pub-Sub-module.html). Read more about our [WebSocket API](/docs/ethereum/wss/introduction).
