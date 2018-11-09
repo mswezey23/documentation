@@ -2,7 +2,7 @@
 
 Getting started with Infura takes just a few minutes once you’ve [signed up](https://infura.io/register).
 
-After sign up, you will create your first "Project", which will include a v3 "Project ID" to use within your app when making requests to infura.io. This project id also provides customized insights and analytics, and routes your data where it needs to go to access the most powerful infrastructure for Ethereum. [Learn more about getting started](/docs/gettingStarted/chooseaNetwork). If you have any issues, check our other resources below for help.
+After sign up, you will create your first "Project", which will include a v3 "Project ID" to use within your app when making requests to infura.io. This project ID also provides customized insights and analytics, and routes your data where it needs to go to access the most powerful infrastructure for Ethereum. [Learn more about getting started](/docs/gettingStarted/chooseaNetwork). If you have any issues, check our other resources below for help.
 
 ## Ethereum API
 
@@ -14,4 +14,4 @@ Access the [IPFS API](https://ipfs.io/docs/api/) and our [public IPFS gateway](h
 
 ## WEBSOCKETS API
 
-Use our JSON-RPC websockets transport to create stateful subscriptions for new blocks. Access the [Ethereum Pub/Sub API documentation](https://github.com/ethereum/go-ethereum/wiki/RPC-PUB-SUB) and [Parity Ethereum Pub/Sub API documentation](https://wiki.parity.io/JSONRPC-Parity-Pub-Sub-module.html). Read more about our [WebSocket API](/docs/wss/introduction).
+Use our JSON-RPC websockets transport to create stateful subscriptions for new blocks. Access the [Ethereum Pub/Sub API documentation](https://github.com/ethereum/go-ethereum/wiki/RPC-PUB-SUB) and [Parity Ethereum Pub/Sub API documentation](https://wiki.parity.io/JSONRPC-Parity-Pub-Sub-module.html). Read more about our [WebSocket API](/docs/ethereum/wss/introduction).

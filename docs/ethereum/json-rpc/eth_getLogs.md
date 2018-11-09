@@ -43,7 +43,7 @@ wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
     - For filters created with `eth_newBlockFilter` the return are block hashes of 32 Bytes), e.g. ["0x3454645634534..."]
     - For filters created with `eth_newPendingTransactionFilter` the return are transaction hashes of 32 Bytes), e.g. ["0x6345343454645..."].
     - For filters created with `eth_newFilter` logs are objects with following params:
-        - `removed`: true when the log was removed, due to a chain reorganization. false if its a valid log.
+        - `removed`: true when the log was removed, due to a chain reorganization. false if it's a valid log.
         - `logIndex`: integer of the log index position in the block. null when its pending log.
         - `transactionIndex`: integer of the transactions index position log was created from. null when its pending log.
         - `transactionHash`: 32 Bytes - hash of the transactions this log was created from. null when its pending log.

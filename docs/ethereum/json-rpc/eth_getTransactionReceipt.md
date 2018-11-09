@@ -39,7 +39,7 @@ wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
     - `blockHash`: 32 Bytes - hash of the block where this transaction was in.
     - `blockNumber`: block number where this transaction was in.
     - `from`: 20 Bytes - address of the sender.
-    - `to`: 20 Bytes - address of the receiver. null when its a contract creation transaction.
+    - `to`: 20 Bytes - address of the receiver. Null when the transaction is a contract creation transaction.
     - `cumulativeGasUsed`: the total amount of gas used when this transaction was executed in the block.
     - `gasUsed`: the amount of gas used by this specific transaction alone.
     - `contractAddress`: 20 Bytes - the contract address created, if the transaction was a contract creation, otherwise - null.

@@ -35,12 +35,12 @@ wscat -c wss://mainnet.infura.io/ws/v3/YOUR-PROJECT-ID
 
 #### RESULT FIELDS
 - `BLOCK` - A block object, or null when no block was found
-    - `number`: the block number. null when its pending block.
+    - `number`: the block number. Null when the returned block is the pending block.
     - `hash`: 32 Bytes - hash of the block. null when its pending block.
     - `parentHash`: 32 Bytes - hash of the parent block.
-    - `nonce`: 8 Bytes - hash of the generated proof-of-work. null when its pending block.
+    - `nonce`: 8 Bytes - hash of the generated proof-of-work. Null when the returned block is the pending block.
     - `sha3Uncles`: 32 Bytes - SHA3 of the uncles data in the block.
-    - `logsBloom`: 256 Bytes - the bloom filter for the logs of the block. null when its pending block.
+    - `logsBloom`: 256 Bytes - the bloom filter for the logs of the block. Null when the returned block is the pending block.
     - `transactionsRoot`: 32 Bytes - the root of the transaction trie of the block.
     - `stateRoot`: 32 Bytes - the root of the final state trie of the block.
     - `receiptsRoot`: 32 Bytes - the root of the receipts trie of the block.
