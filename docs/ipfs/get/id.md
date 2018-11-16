@@ -6,7 +6,7 @@ Show IPFS node id info.
 
 ### REQUEST
 
-`GET https://ipfs.infura.io:5001/api/v0/get?arg=<peerid>&format=<value>`
+`GET https://ipfs.infura.io:5001/api/v0/id?arg=<peerid>&format=<value>`
 
 #### REQUEST PARAMS
 - `arg` _[optional]_ - Peer ID of node to look up.
