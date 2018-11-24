@@ -1,6 +1,6 @@
 # eth_subscribe
 
-Creates a new subscription over particular events. The node will return a subscription id. For each event that matches the subscription a notification with relevant data is send together with the subscription id.
+Creates a new subscription over particular events. The node will return a subscription id. For each event that matches the subscription a notification with relevant data is sent together with the subscription id.
 
 ### REQUEST PARAMS
 - `SUBSCRIPTION TYPE NAME` _[required]_ 
