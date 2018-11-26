@@ -13,7 +13,7 @@ Some tools you can use for making these requests
 The following is an example showing a connection to the websocket endpoint and using subscriptions through web3.js 1.0.
 
 NOTE: web3.js 1.0.0-beta.34 has an open issue with request headers. (https://github.com/ethereum/web3.js/issues/1559)
-Users will have to revert to version 1.0.0-beta.33 to avoid this issue.
+Users will have use version version 1.0.0-beta.36 or revert to version 1.0.0-beta.33 to avoid this issue. 
 
 ```js
 const Web3 = require("web3");
