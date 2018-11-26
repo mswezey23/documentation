@@ -6,7 +6,7 @@ Show IPFS version information.
 
 ### REQUEST
 
-`GET https://ipfs.infura.io:5001/api/v0/get?number=false&commit=false&repo=false&all=false`
+`GET https://ipfs.infura.io:5001/api/v0/version?number=false&commit=false&repo=false&all=false`
 
 #### REQUEST PARAMS
 - `number` _[optional]_ - Only show the version number. Default is false
@@ -18,7 +18,7 @@ Show IPFS version information.
 #### EXAMPLE
 ```bash
 // GET
-curl "https://ipfs.infura.io:5001/api/v0/version?arg=Qmdnso85PCsvwSPp9NDZHqfoK872onaw2rgckgJSkWdK5N"
+curl "https://ipfs.infura.io:5001/api/v0/version"
 ```
 
 ### RESPONSE
